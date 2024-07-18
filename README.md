@@ -28,7 +28,7 @@ Then browse to the file location and click on "load", Then "Always Load", Then w
 
 #### export_ferrule_coordinates_Prefix
 
-```http
+```bash
   EXPORTFERRULECOORDINATES
 ```
 - After the command you need to provide a prefix which will helps to identify the Ferrule Numbers. 
