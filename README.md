@@ -26,16 +26,16 @@ Then browse to the file location and click on "load", Then "Always Load", Then w
 
 ## COMMANDS
 
-#### export_ferrule_coordinates_Prefix
-
+### export_ferrule_coordinates_Prefix
+Exports Ferrule Numbers with X, Y Co-ordinates, Text size and Text Orientation as a CSV file from AutoCAD Drawing in your Documents folder.
 ```bash
   EXPORTFERRULECOORDINATES
 ```
 - After the command you need to provide a prefix which will helps to identify the Ferrule Numbers. 
 For example there are 100s of Ferrule Numbers like Q101, Q102, ... so on, in this example every Ferrule Number starts with Q so the Prefix would be Q. If your Ferrule Number has multiple prefixes like R, S, T then you need to run Add_Prefix_And_Suffix script for give them a generalised prefix.
 - After that press Enter and then a CSV file named ferrule_coordinates.csv will be created in your "Documents" folder.
-#### Increment_Text_Or_Ferrule_Prefix_Suffix
-
+### Increment_Text_Or_Ferrule_Prefix_Suffix
+Increment numaric charecters by 1 of multiple text automatically and chronologically even if you have other charecters in your texts.
 ```bash
   INCREMENTTEXTCOMMAND
 ```
@@ -49,13 +49,18 @@ You have text like, Q101-T, Q101-T, Q100-T, Q10-T, Q107-T, Q155-T, ...
 - First give Prefix Q and Suffix -T
 - Then you need to select the first Q101-T then all the texts and then press Enter.
 - Your OUTPUT will be like this, Q101-T, Q102-T, Q103-T, Q104-T, Q105-T, Q106-T, ...
-#### Add_Prefix_And_Suffix
-
+### Add_Prefix_And_Suffix
+Add Prefix and Suffix in multiple texts automatically
 ```bash
-  COMMANDS
+  ADDPREFIXANDSUFFIXTOTEXTCOMMAND
 ```
-#### Delete_Text_With_Prefix
-
+- After the command you need to give a prefix or suffix or both
+- After that you need to select the texts where you want to add those prefix and suffix After that press Enter, and all the selected texts will be modified
+### Delete_Text_With_Prefix
+Delete texts having your defined prefix in a area you select in just a click
 ```bash
-  COMMANDS
+  DELTEXTINAREA
 ```
+- After the command enter the common prefix for the texts you want to delete. 
+For example you want to delete all the texts which starts with Q like, Q101-T, Q101-T, Q100-T, Q10-T, Q107-T, Q155-T, ...
+- After that select an area in the drawing from where you want to delete the texts and press Enter, all the texts in that area having your given prefix will be deleted.
