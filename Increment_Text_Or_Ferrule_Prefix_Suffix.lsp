@@ -2,6 +2,11 @@
   (strcat prefix (itoa (+ base-num increment)) suffix)
 )
 
+(defun extract-number (base-txt prefix)
+  (setq base-txt (substr base-txt (1+ (strlen prefix))))
+  (atoi base-txt)
+)
+
 (defun c:IncrementText (/ ss i prefix suffix base-ent base-txt base-num increment ent entData newTxt)
   (princ "\nEnter the prefix text: ")
   (setq prefix (getstring))
